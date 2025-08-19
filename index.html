@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Reservations</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🍽️ Restaurant Reservations</h1>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <div class="fix">
+          <h2>New Reservation</h2>
+          <form id="reservation-form">
+            <input
+              type="text"
+              id="customer"
+              placeholder="Customer name"
+              required
+            />
+            <input
+              type="number"
+              id="people"
+              placeholder="Number of people"
+              min="1"
+              required
+            />
+
+            <select id="payment">
+              <option value="">Select payment (optional)</option>
+              <option value="cash">Cash</option>
+              <option value="card">Card</option>
+              <option value="voucher">Voucher</option>
+            </select>
+
+            <button id="add-button" type="submit">Add Reservation</button>
+          </form>
+        </div>
+      </section>
+      <section class="list-section">
+        <h2>Reservations</h2>
+        <ul id="reservation-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with ❤️ in TypeScript</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

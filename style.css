@@ -1,0 +1,230 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  cursor: pointer;
+}
+
+:root {
+  --bg: #0f1117;
+  --card: #1a1d29;
+  --card-hover: #232739;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --radius: 12px;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* Sections */
+main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Card style */
+section {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: background 0.2s;
+}
+
+section:hover {
+  background: var(--card-hover);
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+form input,
+form select {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #2d3142;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: #111318;
+  color: var(--text);
+}
+
+form input::placeholder {
+  color: var(--muted);
+}
+
+form select {
+  cursor: pointer;
+}
+
+form select option {
+  background: var(--card);
+  color: var(--text);
+}
+
+form button {
+  padding: 0.8rem 1.2rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+form button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* Reservations list */
+ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111318;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #2d3142;
+  transition: background 0.2s;
+}
+
+ul li:hover {
+  background: #181b24;
+}
+
+li span {
+  font-weight: 500;
+}
+
+/* Button group (fix: alinhado à direita) */
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+/* Delete & Approve buttons - mesmo tamanho */
+.delete-button,
+.approve-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.delete-button {
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+.delete-button:active {
+  transform: scale(0.95);
+}
+
+.approve-button {
+  background: #22c55e;
+}
+
+.approve-button:hover {
+  background: #16a34a;
+}
+
+.approve-button:active {
+  transform: scale(0.95);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Form Section */
+.form-section {
+  padding: 1rem; /* mais compacto que os 1.5rem padrão */
+  margin-bottom: 1rem; /* separação da lista */
+}
+
+/* List Section */
+.list-section {
+  padding: 1.5rem; /* mantém o tamanho padrão */
+}
+
+/* Estados diferentes */
+li.pending {
+  border-left: 4px solid #facc15; /* amarelo */
+}
+
+li.confirmed {
+  border-left: 4px solid #22c55e; /* verde */
+  background: rgba(34, 197, 94, 0.1);
+}
+
+li.cancelled {
+  border-left: 4px solid #dc2626; /* vermelho */
+  background: rgba(220, 38, 38, 0.1);
+}
+
+/* Botões */
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fix {
+  max-height: 100px;
+  min-height: 20px;
+}
